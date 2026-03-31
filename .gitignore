@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual env
+venv/
+.env/
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+notebooks/
+*.ipynb
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs
+*.log
+
+# Local outputs
+outputs/
+
+# Raw data
+data/
+
+# Generated numpy artifacts
+model/*.npy
+
+# Optional old artifacts
+model/*.pt

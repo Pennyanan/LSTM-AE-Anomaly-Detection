@@ -1,0 +1,11 @@
+{
+  "window_size": 20,
+  "stride": 1,
+  "fault_start": 160,
+  "seed": 42,
+  "training_time_sec": 8012.659997701645,
+  "n_train_windows": 244660,
+  "n_val_windows": 56460,
+  "n_test_windows": 131740,
+  "n_features": 52
+}
