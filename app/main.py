@@ -8,7 +8,7 @@ import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import socket
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -441,6 +441,10 @@ def save_evaluation_artifacts(
 # =========================
 # Endpoints
 # =========================
+@app.get("/whoami")
+def whoami():
+    return {"pod": socket.gethostname()}
+    
 @app.get("/health")
 def health():
     return {"status": "ok"}
@@ -583,7 +587,7 @@ def latest_evaluation():
     html = f"""
     <html>
     <head>
-        <title>Latest Evaluation Dashboard</title>
+        <title>Evaluation Dashboard</title>
         <style>
             body {{
                 font-family: Arial, sans-serif;
