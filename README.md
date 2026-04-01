@@ -9,7 +9,7 @@
 
 ```bash
 docker pull peianchen/tep-anomaly-api
-docker run -p 8000:8000 peianchen/tep-anomaly-api
+docker run -p 8000:8000 -v %cd%/evaluation_outputs:/app/evaluation_outputs peianchen/tep-anomaly-api
 ```
 啟動後開啟：
 
@@ -30,12 +30,16 @@ payload = {
     "aggregate": "max"
 }
 
-url = "http://localhost:8000/predict_tep_official_test_records"
+url = "http://localhost:8000/evaluate_tep_official_test_records"
 resp = requests.post(url, json=payload)
 
 print(resp.status_code)
 print(resp.json())
 ```
+Python 呼叫完畢後
+
+查看評估視覺圖: http://localhost:8000/latest_evaluation
+
 專案特色
 - 已訓練完成之 LSTM Autoencoder 模型
 - 自動化前處理（符合 TEP 資料格式）
