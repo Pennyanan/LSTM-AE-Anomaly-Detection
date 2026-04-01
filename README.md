@@ -1,6 +1,12 @@
+## 快速使用（Docker）
 
-```md
+```bash
+docker pull peianchen/tep-anomaly-api
+docker run -p 8000:8000 peianchen/tep-anomaly-api
+```
 # LSTM-AE 異常偵測 API（Tennessee Eastman Process）
+```md
+
 
 本專案提供一個基於 LSTM Autoencoder 的異常偵測服務，應用於 Tennessee Eastman Process（TEP）資料。  
 系統已完成模型訓練與部署，使用者僅需提供資料，即可透過 API 完成前處理與異常偵測。
